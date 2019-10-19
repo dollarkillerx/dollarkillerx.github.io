@@ -188,6 +188,9 @@
                         this.principal = (parseFloat(this.principal) + parseFloat(this.fixed_throw)).toFixed(2);
                         this.principal_add = (parseFloat(this.principal_add) + parseFloat(this.fixed_throw)).toFixed(2);
                     } else {
+                    	if (this.principal_c == "") {
+							this.principal_c = 0;
+						}
                         this.principal = (parseFloat(this.principal_c) + parseFloat(this.fixed_throw)).toFixed(2);
                         this.principal_add = (parseFloat(this.principal)).toFixed(2);
                     }
