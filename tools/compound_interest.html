@@ -175,31 +175,41 @@
         },
         methods: {
             calculation: function () {
-                let month = parseInt(this.annual) * 12; // 投资月份
-                let month_interest = parseInt(this.annual_interest) / 100 / 12; // 单月基本利润  (其实这样算不是太精准)
+                this.resultData = [];
+                this.interest = 0;
+                this.result = 0;
+                this.principal_add = 0;
 
+                let month = parseFloat(this.annual) * 12; // 投资月份
+                let month_interest = parseFloat(this.annual_interest) / 100 / 12; // 单月基本利润  (其实这样算不是太精准)
+				console.log("月利息" + month_interest);
                 for (let i = 1; i <= month; i++) {
                     if (i != 1) {
-                        this.principal = (parseInt(this.principal) + parseInt(this.fixed_throw)).toFixed(2);
-                        this.principal_add = (parseInt(this.principal_add) + parseInt(this.fixed_throw)).toFixed(2);
+                        this.principal = (parseFloat(this.principal) + parseFloat(this.fixed_throw)).toFixed(2);
+                        this.principal_add = (parseFloat(this.principal_add) + parseFloat(this.fixed_throw)).toFixed(2);
                     } else {
-                        this.principal = (parseInt(this.principal_c) + parseInt(this.fixed_throw)).toFixed(2);
-                        this.principal_add = (parseInt(this.principal)).toFixed(2);
+                        this.principal = (parseFloat(this.principal_c) + parseFloat(this.fixed_throw)).toFixed(2);
+                        this.principal_add = (parseFloat(this.principal)).toFixed(2);
                     }
                     // 这个月的利息
-                    let interest = (parseInt(this.principal * month_interest)).toFixed(2);
-                    this.interest = (parseInt(this.interest) + parseInt(interest)).toFixed(2);
-                    // 本金 加 利息
-                    this.principal = (parseInt(this.principal) + parseInt(interest)).toFixed(2);
+                    let interest = (parseFloat(this.principal) * parseFloat(month_interest)).toFixed(2);
 
+					this.interest = (parseFloat(this.interest) + parseFloat(interest)).toFixed(2);
+                    // 本金 加 利息
+                    this.principal = (parseFloat(this.principal) + parseFloat(interest)).toFixed(2);
+					console.log("第" + i + "月 本金" + this.principal_add);
+					console.log("第" + i + "月 利息" + interest);
+					console.log("第" + i + "月 利息 add" + this.interest);
+					console.log("第" + i + "月 结余" + this.principal);
+					console.log("=========================================");
                     // 当满一年 就往 resultData 中插入数据
                     let b = i % 12;
                     if (b == 0) {
                         let year = i / 12;
                         let data = {
                             "year": year,
-                            "result": parseInt(this.principal),
-                            "interest": parseInt(this.interest)
+                            "result": parseFloat(this.principal),
+                            "interest": parseFloat(this.interest)
                         };
                         this.resultData.push(data);
                     }
