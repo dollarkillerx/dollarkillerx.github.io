@@ -18,4 +18,6 @@
    * [Session](test/14.md)
    * [高速缓存](test/9.md) 
    * [Token](test/16.md) 
+   * [Validate](test/17.md) 
+   * [反向解析](test/18.md) 
 
