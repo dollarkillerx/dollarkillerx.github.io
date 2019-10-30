@@ -16,5 +16,6 @@
    * [静态文件服务](test/12.md)
    * [多语言](test/13.md)
    * [Session](test/14.md)
-  <!-- * [自定义中间件](test/9.md)--> 
+   * [高速缓存](test/9.md) 
+   * [Token](test/16.md) 
 
