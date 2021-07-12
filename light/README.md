@@ -1,11 +1,11 @@
 # Light RPC 
-> Encrypted reliable components RPC
+> Encrypted reliable components RPC  github.com/dollarkillerx/light
 
 ##  Example
 - [hello world](https://github.com/dollarkillerx/light/tree/main/examples/helloworld)
 - [auth](https://github.com/dollarkillerx/light/tree/main/examples/auth)
 - [middleware](https://github.com/dollarkillerx/light/tree/main/examples/middleware)
-- [redis_discorey](https://github.com/dollarkillerx/light/tree/main/examples/redis_discorey)
+- [discorey](https://github.com/dollarkillerx/light/tree/main/examples/redis_discorey)
 
 ## Features
 

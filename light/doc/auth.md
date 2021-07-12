@@ -1,19 +1,7 @@
-# Quick Start
-
-## Requirements
-- Go 1.13 or above
-
-## Installation
-
-``` 
-go get github.com/dollarkillerx/light
-```
-
-## hello world 
-> https://github.com/dollarkillerx/light/tree/main/examples/helloworld
+# Auth
+> https://github.com/dollarkillerx/light/tree/main/examples/auth
 
 ### Define payload
-
 ```go
 type Request struct {
 	Name string
@@ -25,8 +13,6 @@ type Response struct {
 ```
 
 ### Server
-> Note: The service name and method name must be public !!!
-
 ```go
 func main() {
 	ser := server.NewServer()
@@ -35,7 +21,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	if err := ser.Run(server.UseTCP("0.0.0.0:8074")); err != nil {
+	if err := ser.Run(server.UseTCP("0.0.0.0:8074"),server.SetAUTH(authFunc)); err != nil {
 		log.Fatalln(err)
 	}
 }
@@ -44,30 +30,36 @@ type Demo struct{}
 
 func (s *Demo) HelloWorld(ctx *light.Context, req *Request, resp *Response) error {
 	resp.RPName = fmt.Sprintf("hello world by: %s", req.Name)
-	//return errors.New(":xx")
-	//fmt.Println(resp)
 	return nil
+}
+
+// Define permission verification methods
+func authFunc(ctx *light.Context, token string) error {
+    if token == "token" {
+    	return nil
+    }
+
+    return errors.New("error 401")
 }
 ```
 
 ### Client
-
 ```go
 func main() {
-	client := client.NewClient(discovery.NewSimplePeerToPeer("127.0.0.1:8074", transport.TCP))
+	client := client.NewClient(discovery.NewSimplePeerToPeer("127.0.0.1:8074", transport.TCP), client.SetAUTH("token"))
 	connect, err := client.NewConnect("Demo")
 	if err != nil {
 		log.Fatalln(err)
 		return
 	}
 
-
+	req := Request{
+		Name: "hello",
+	}
 	resp := Response{}
-	err = connect.Call(light.DefaultCtx(), "HelloWorld", &Request{Name: "hello"}, &resp)
+	err = connect.Call(light.DefaultCtx(), "HelloWorld", &req, &resp)
 	if err != nil {
 		log.Fatalln(err)
 	}
-
-	fmt.Println(resp)
 }
 ```

@@ -3,3 +3,9 @@
 * [About](README.md)
 * [Quick Start](doc/quick_start.md)
 * [Benchmarks](doc/benchmarks.md)
+* [Examples](doc/examples.md)
+    * [Auth](doc/auth.md)
+    * [Middleware](doc/middleware.md)
+    * [Discovery](doc/discovery.md)
+    
+  

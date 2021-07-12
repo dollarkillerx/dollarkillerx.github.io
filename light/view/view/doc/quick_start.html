@@ -128,64 +128,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="examples.html">
-            
-                <a href="examples.html">
-            
-                    
-                    Examples
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1" data-path="auth.html">
-            
-                <a href="auth.html">
-            
-                    
-                    Auth
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="middleware.html">
-            
-                <a href="middleware.html">
-            
-                    
-                    Middleware
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="discovery.html">
-            
-                <a href="discovery.html">
-            
-                    
-                    Discovery
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
 
     
 
@@ -232,17 +174,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="quick-start">Quick Start</h1>
-<h2 id="requirements">Requirements</h2>
+<h3 id="requirements">Requirements</h3>
 <ul>
 <li>Go 1.13 or above</li>
 </ul>
-<h2 id="installation">Installation</h2>
+<h3 id="installation">Installation</h3>
 <pre><code>go get github.com/dollarkillerx/light
-</code></pre><h2 id="hello-world">hello world</h2>
+</code></pre><h3 id="hello-world">hello world</h3>
 <blockquote>
 <p><a href="https://github.com/dollarkillerx/light/tree/main/examples/helloworld" target="_blank">https://github.com/dollarkillerx/light/tree/main/examples/helloworld</a></p>
 </blockquote>
-<h3 id="define-payload">Define payload</h3>
+<p><strong>Define payload</strong></p>
 <pre><code class="lang-go"><span class="hljs-keyword">type</span> Request <span class="hljs-keyword">struct</span> {
     Name <span class="hljs-keyword">string</span>
 }
@@ -251,7 +193,7 @@
     RPName <span class="hljs-keyword">string</span>
 }
 </code></pre>
-<h3 id="server">Server</h3>
+<p><strong>server</strong></p>
 <blockquote>
 <p>Note: The service name and method name must be public !!!</p>
 </blockquote>
@@ -276,7 +218,7 @@
     <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
 }
 </code></pre>
-<h3 id="client">Client</h3>
+<p><strong>client</strong></p>
 <pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
     client := client.NewClient(discovery.NewSimplePeerToPeer(<span class="hljs-string">&quot;127.0.0.1:8074&quot;</span>, transport.TCP))
     connect, err := client.NewConnect(<span class="hljs-string">&quot;Demo&quot;</span>)
@@ -338,7 +280,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Quick Start","level":"1.2","depth":1,"next":{"title":"Benchmarks","level":"1.3","depth":1,"path":"doc/benchmarks.md","ref":"doc/benchmarks.md","articles":[]},"previous":{"title":"About","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/quick_start.md","mtime":"2021-07-12T09:19:50.075Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-12T10:13:20.212Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Quick Start","level":"1.2","depth":1,"next":{"title":"Benchmarks","level":"1.3","depth":1,"path":"doc/benchmarks.md","ref":"doc/benchmarks.md","articles":[]},"previous":{"title":"About","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/quick_start.md","mtime":"2021-07-12T09:04:25.326Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-12T09:04:28.868Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
