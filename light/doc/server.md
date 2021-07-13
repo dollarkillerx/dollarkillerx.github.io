@@ -3,13 +3,13 @@
 > https://github.com/dollarkillerx/light/blob/main/server/options.go
 
 ### Available configurations: 
-- [UseTCP](#UseTCP) default 
+- [UseTCP](#UseTCP)    default 
 - [UseUnix](#UseUnix)
 - [UseKCP](#UseKCP)
 - [SetAESCryptology](#SetAESCryptology)   ！！！ Official environment must be configured
 - [SetAUTH](#SetAUTH)
 - [SetDiscovery](#SetDiscovery)
-- [SetTimeout](#SetTimeout)
+- [SetTimeout](#SetTimeout)     # Default is fine
 - [SetContext](#SetContext)
 - [Trace](#Trace)
 
