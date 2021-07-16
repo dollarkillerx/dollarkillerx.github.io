@@ -40,3 +40,4 @@ Capture all painc
 - Tell us about your success with LightRPC
 - Contribute to an existing library
 
+![](https://raw.githubusercontent.com/dollarkillerx/light/main/README/light_rpc.svg)
