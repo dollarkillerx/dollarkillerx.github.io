@@ -1,247 +1,247 @@
-<!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-cmn-Hans">-->
 
-<head>
-    <title>DollarKiller 复利工具盒</title>
-    <meta name="keywords" content="DollarKiller一些工具盒">
-    <meta name="description" content="你不理财,财不理你!">
-    <meta charset="utf-8">
-    <script src="https://cdn.staticfile.org/vue/2.6.10/vue.min.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <link rel="stylesheet" href="https://www.dollarkiller.com/lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.dollarkiller.com/lib/css/style.css">
-    <link rel="stylesheet" href="https://www.dollarkiller.com/lib/css/themecolor.css">
-</head>
+<!--<head>-->
+<!--    <title>DollarKiller 复利工具盒</title>-->
+<!--    <meta name="keywords" content="DollarKiller一些工具盒">-->
+<!--    <meta name="description" content="你不理财,财不理你!">-->
+<!--    <meta charset="utf-8">-->
+<!--    <script src="https://cdn.staticfile.org/vue/2.6.10/vue.min.js"></script>-->
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="https://www.dollarkiller.com/lib/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="https://www.dollarkiller.com/lib/css/style.css">-->
+<!--    <link rel="stylesheet" href="https://www.dollarkiller.com/lib/css/themecolor.css">-->
+<!--</head>-->
 
-<body>
-<header>
-    <div class="collapse bg-light" id="navbarHeader">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-11 py-4">
-                    <h4 class="text-muted">关于</h4>
-                    <p class="text-muted">DollarKiller是一个程序,他也具有一定的金融知识 (贪婪唤起赌博的天性，被弥漫的繁荣所驱使)。</p>
-                    <a href="https://blog.dollarkiller.com" class="btn btn-dark d-sm-none">Blog</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="navbar navbar-dark bg-info box-shadow">
-        <div class="container d-flex justify-content-between">
-            <a href="/" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <strong>DollarKiller</strong></a>
-            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="https://blog.dollarkiller.com" rel="noopener">Blog</a></li>
-            </ul>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                    aria-controls="navbarHeader"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>
-</header>
+<!--<body>-->
+<!--<header>-->
+<!--    <div class="collapse bg-light" id="navbarHeader">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-12 col-md-11 py-4">-->
+<!--                    <h4 class="text-muted">关于</h4>-->
+<!--                    <p class="text-muted">DollarKiller是一个程序,他也具有一定的金融知识 (贪婪唤起赌博的天性，被弥漫的繁荣所驱使)。</p>-->
+<!--                    <a href="https://blog.dollarkiller.com" class="btn btn-dark d-sm-none">Blog</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="navbar navbar-dark bg-info box-shadow">-->
+<!--        <div class="container d-flex justify-content-between">-->
+<!--            <a href="/" class="navbar-brand d-flex align-items-center">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"-->
+<!--                     stroke="currentColor"-->
+<!--                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">-->
+<!--                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>-->
+<!--                    <circle cx="12" cy="13" r="4"></circle>-->
+<!--                </svg>-->
+<!--                <strong>DollarKiller</strong></a>-->
+<!--            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link p-2" href="https://blog.dollarkiller.com" rel="noopener">Blog</a></li>-->
+<!--            </ul>-->
+<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"-->
+<!--                    aria-controls="navbarHeader"-->
+<!--                    aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
 
-<main role="main">
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <h2 class="text-success">复利计算器
-            </h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card card_default mb-4 box-shadow">
-                        <div class="card-body">
+<!--<main role="main">-->
+<!--    <div class="album py-5 bg-light">-->
+<!--        <div class="container">-->
+<!--            <h2 class="text-success">复利计算器-->
+<!--            </h2>-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                    <div class="card card_default mb-4 box-shadow">-->
+<!--                        <div class="card-body">-->
 
-                            <div id="app">
-                                <div class="row">
+<!--                            <div id="app">-->
+<!--                                <div class="row">-->
 
-                                    <div class="col-sm">
+<!--                                    <div class="col-sm">-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="principal">本金</span>
-                                            </div>
-                                            <input type="text" class="form-control" aria-label="Small"
-                                                   aria-describedby="principal" v-model="principal_c">
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="principal">本金</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control" aria-label="Small"-->
+<!--                                                   aria-describedby="principal" v-model="principal_c">-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="fixed_throw">每月定投</span>
-                                            </div>
-                                            <input type="text" class="form-control" aria-label="Small"
-                                                   aria-describedby="fixed_throw" v-model="fixed_throw">
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="fixed_throw">每月定投</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control" aria-label="Small"-->
+<!--                                                   aria-describedby="fixed_throw" v-model="fixed_throw">-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="annual_interest">预计年利</span>
-                                            </div>
-                                            <input type="text" class="form-control"
-                                                   aria-label="Amount (to the nearest dollar)"
-                                                   v-model="annual_interest">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">%</span>
-                                            </div>
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="annual_interest">预计年利</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control"-->
+<!--                                                   aria-label="Amount (to the nearest dollar)"-->
+<!--                                                   v-model="annual_interest">-->
+<!--                                            <div class="input-group-append">-->
+<!--                                                <span class="input-group-text">%</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="annual">年期</span>
-                                            </div>
-                                            <input type="text" class="form-control" aria-label="Small"
-                                                   aria-describedby="annual" v-model="annual">
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="annual">年期</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control" aria-label="Small"-->
+<!--                                                   aria-describedby="annual" v-model="annual">-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="result">结果</span>
-                                            </div>
-                                            <input type="text" class="form-control" aria-label="Small" readonly
-                                                   aria-describedby="result" v-model="principal">
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="result">结果</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control" aria-label="Small" readonly-->
+<!--                                                   aria-describedby="result" v-model="principal">-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="interest">其中利息</span>
-                                            </div>
-                                            <input type="text" class="form-control" aria-label="Small" readonly
-                                                   aria-describedby="interest" v-model="interest">
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="interest">其中利息</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control" aria-label="Small" readonly-->
+<!--                                                   aria-describedby="interest" v-model="interest">-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="principal_add">本金累计</span>
-                                            </div>
-                                            <input type="text" class="form-control" aria-label="Small" readonly
-                                                   aria-describedby="principal_add"
-                                                   v-model="principal_add">
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="principal_add">本金累计</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control" aria-label="Small" readonly-->
+<!--                                                   aria-describedby="principal_add"-->
+<!--                                                   v-model="principal_add">-->
+<!--                                        </div>-->
 
-                                        <div class="input-group input-group-sm mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="statistics">统计(收益率)</span>
-                                            </div>
-                                            <input type="text" class="form-control"
-                                                   aria-label="Amount (to the nearest dollar)"
-												   readonly
-                                                   v-model="statistics">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">%</span>
-                                            </div>
-                                        </div>
+<!--                                        <div class="input-group input-group-sm mb-3">-->
+<!--                                            <div class="input-group-prepend">-->
+<!--                                                <span class="input-group-text" id="statistics">统计(收益率)</span>-->
+<!--                                            </div>-->
+<!--                                            <input type="text" class="form-control"-->
+<!--                                                   aria-label="Amount (to the nearest dollar)"-->
+<!--												   readonly-->
+<!--                                                   v-model="statistics">-->
+<!--                                            <div class="input-group-append">-->
+<!--                                                <span class="input-group-text">%</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
 
-                                        <button class="btn btn-primary" @click="calculation">计算</button>
+<!--                                        <button class="btn btn-primary" @click="calculation">计算</button>-->
 
-                                    </div>
+<!--                                    </div>-->
 
-                                    <div class="col-sm">
-                                        历史:
-                                        <br>
-                                        <ul class="list-group">
-                                            <li class="list-group-item" v-for="item in resultData">
-                                                第{{item.year}}年 利润{{item.interest}} 结果{{item.result}}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                    <div class="col-sm">-->
+<!--                                        历史:-->
+<!--                                        <br>-->
+<!--                                        <ul class="list-group">-->
+<!--                                            <li class="list-group-item" v-for="item in resultData">-->
+<!--                                                第{{item.year}}年 利润{{item.interest}} 结果{{item.result}}-->
+<!--                                            </li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-</main>
+<!--</main>-->
 
-<footer>
-    <div class="container">
-        <p class="float-right">
-            <a href="#">回到顶部</a></p>
-        <p>快速进入我的博客
-            <a href="https://blog.dollarkiller.com" target="_blank" class="badge badge-primary my-2">Blog</a>
-        <p>Copyright @DollarKiller dollarkiller.com.  蜀ICP备18015613号-1</p>
-    </div>
-</footer>
-<script>
-    let vue = new Vue({
-        el: "#app",
-        data: {
-            principal: 0, // 本金
-            principal_c: 0, // 本金
-            fixed_throw: 0, // 每月定投
-            annual_interest: 0, // 预计年利
-            annual: 0, // 年期
-            result: 0, // 结果
-            interest: 0, // 利息
-            resultData: [], // 显示data
-            principal_add: 0,// 本金累计
-            statistics: 0
-        },
-        methods: {
-            calculation: function () {
-                this.resultData = [];
-                this.interest = 0;
-                this.result = 0;
-                this.principal_add = 0;
+<!--<footer>-->
+<!--    <div class="container">-->
+<!--        <p class="float-right">-->
+<!--            <a href="#">回到顶部</a></p>-->
+<!--        <p>快速进入我的博客-->
+<!--            <a href="https://blog.dollarkiller.com" target="_blank" class="badge badge-primary my-2">Blog</a>-->
+<!--        <p>Copyright @DollarKiller dollarkiller.com.  蜀ICP备18015613号-1</p>-->
+<!--    </div>-->
+<!--</footer>-->
+<!--<script>-->
+<!--    let vue = new Vue({-->
+<!--        el: "#app",-->
+<!--        data: {-->
+<!--            principal: 0, // 本金-->
+<!--            principal_c: 0, // 本金-->
+<!--            fixed_throw: 0, // 每月定投-->
+<!--            annual_interest: 0, // 预计年利-->
+<!--            annual: 0, // 年期-->
+<!--            result: 0, // 结果-->
+<!--            interest: 0, // 利息-->
+<!--            resultData: [], // 显示data-->
+<!--            principal_add: 0,// 本金累计-->
+<!--            statistics: 0-->
+<!--        },-->
+<!--        methods: {-->
+<!--            calculation: function () {-->
+<!--                this.resultData = [];-->
+<!--                this.interest = 0;-->
+<!--                this.result = 0;-->
+<!--                this.principal_add = 0;-->
 
-                let month = parseFloat(this.annual) * 12; // 投资月份
-                let month_interest = parseFloat(this.annual_interest) / 100 / 12; // 单月基本利润  (其实这样算不是太精准)
-                console.log("月利息" + month_interest);
-                for (let i = 1; i <= month; i++) {
-                    if (i != 1) {
-                        this.principal = (parseFloat(this.principal) + parseFloat(this.fixed_throw)).toFixed(2);
-                        this.principal_add = (parseFloat(this.principal_add) + parseFloat(this.fixed_throw)).toFixed(2);
-                    } else {
-                        if (this.principal_c == "") {
-                            this.principal_c = 0;
-                        }
-                        this.principal = (parseFloat(this.principal_c) + parseFloat(this.fixed_throw)).toFixed(2);
-                        this.principal_add = (parseFloat(this.principal)).toFixed(2);
-                    }
-                    // 这个月的利息
-                    let interest = (parseFloat(this.principal) * parseFloat(month_interest)).toFixed(2);
+<!--                let month = parseFloat(this.annual) * 12; // 投资月份-->
+<!--                let month_interest = parseFloat(this.annual_interest) / 100 / 12; // 单月基本利润  (其实这样算不是太精准)-->
+<!--                console.log("月利息" + month_interest);-->
+<!--                for (let i = 1; i <= month; i++) {-->
+<!--                    if (i != 1) {-->
+<!--                        this.principal = (parseFloat(this.principal) + parseFloat(this.fixed_throw)).toFixed(2);-->
+<!--                        this.principal_add = (parseFloat(this.principal_add) + parseFloat(this.fixed_throw)).toFixed(2);-->
+<!--                    } else {-->
+<!--                        if (this.principal_c == "") {-->
+<!--                            this.principal_c = 0;-->
+<!--                        }-->
+<!--                        this.principal = (parseFloat(this.principal_c) + parseFloat(this.fixed_throw)).toFixed(2);-->
+<!--                        this.principal_add = (parseFloat(this.principal)).toFixed(2);-->
+<!--                    }-->
+<!--                    // 这个月的利息-->
+<!--                    let interest = (parseFloat(this.principal) * parseFloat(month_interest)).toFixed(2);-->
 
-                    this.interest = (parseFloat(this.interest) + parseFloat(interest)).toFixed(2);
-                    // 本金 加 利息
-                    this.principal = (parseFloat(this.principal) + parseFloat(interest)).toFixed(2);
-                    console.log("第" + i + "月 本金" + this.principal_add);
-                    console.log("第" + i + "月 利息" + interest);
-                    console.log("第" + i + "月 利息 add" + this.interest);
-                    console.log("第" + i + "月 结余" + this.principal);
-                    console.log("=========================================");
-                    // 当满一年 就往 resultData 中插入数据
-                    let b = i % 12;
-                    if (b == 0) {
-                        let year = i / 12;
-                        let data = {
-                            "year": year,
-                            "result": parseFloat(this.principal),
-                            "interest": parseFloat(this.interest)
-                        };
-                        this.resultData.push(data);
-                    }
+<!--                    this.interest = (parseFloat(this.interest) + parseFloat(interest)).toFixed(2);-->
+<!--                    // 本金 加 利息-->
+<!--                    this.principal = (parseFloat(this.principal) + parseFloat(interest)).toFixed(2);-->
+<!--                    console.log("第" + i + "月 本金" + this.principal_add);-->
+<!--                    console.log("第" + i + "月 利息" + interest);-->
+<!--                    console.log("第" + i + "月 利息 add" + this.interest);-->
+<!--                    console.log("第" + i + "月 结余" + this.principal);-->
+<!--                    console.log("=========================================");-->
+<!--                    // 当满一年 就往 resultData 中插入数据-->
+<!--                    let b = i % 12;-->
+<!--                    if (b == 0) {-->
+<!--                        let year = i / 12;-->
+<!--                        let data = {-->
+<!--                            "year": year,-->
+<!--                            "result": parseFloat(this.principal),-->
+<!--                            "interest": parseFloat(this.interest)-->
+<!--                        };-->
+<!--                        this.resultData.push(data);-->
+<!--                    }-->
 
-                }
+<!--                }-->
 
-                // 统计收益
-				console.log(parseFloat(this.interest) / parseFloat(this.principal_add));
-				this.statistics = (parseFloat(this.interest) / parseFloat(this.principal_add) * 100).toFixed(0);
-            }
-        }
-    })
-</script>
-<script src="https://www.dollarkiller.com/lib/js/jquery-3.2.1.slim.min.js"></script>
-<script src="https://www.dollarkiller.com/lib/js/popper-1.12.9.min.js"></script>
-<script src="https://www.dollarkiller.com/lib/js/bootstrap.min.js"></script>
-</body>
-</html>
+<!--                // 统计收益-->
+<!--				console.log(parseFloat(this.interest) / parseFloat(this.principal_add));-->
+<!--				this.statistics = (parseFloat(this.interest) / parseFloat(this.principal_add) * 100).toFixed(0);-->
+<!--            }-->
+<!--        }-->
+<!--    })-->
+<!--</script>-->
+<!--<script src="https://www.dollarkiller.com/lib/js/jquery-3.2.1.slim.min.js"></script>-->
+<!--<script src="https://www.dollarkiller.com/lib/js/popper-1.12.9.min.js"></script>-->
+<!--<script src="https://www.dollarkiller.com/lib/js/bootstrap.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
